@@ -15,7 +15,7 @@ read_def fastroute1.def
 set_wire_rc -layer metal3
 
 fastroute -output_file route.guide \
-            -max_routing_layer 10 
+            -max_routing_layer 10  \
           -unidirectional_routing true \
           -capacity_adjustment 0.15 \
           -layers_adjustments {{2 0.5} {3 0.5}} \
