@@ -1,0 +1,142 @@
+VERSION 5.6 ;
+
+
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/"  ;
+
+MACRO osc10mv1tsmc180n
+    CLASS BLOCK ;
+    FOREIGN osc10mv1tsmc180n 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 120.0 BY 40.0 ;
+    SYMMETRY x y r90 ;
+
+    PIN vcc
+        DIRECTION  INOUT ;
+	USE POWER ;
+        PORT
+        LAYER metal1 ;
+        RECT  36.72 35.2 41.52 40.0 ;
+        END
+    END vcc
+
+    PIN gnd
+        DIRECTION  INOUT ;
+	USE GROUND ;
+        PORT
+        LAYER metal1 ;
+        RECT  78.24 35.2 83.04 40.0 ;
+        END
+    END gnd
+
+    PIN o18clk
+        DIRECTION  OUTPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  119.76 13.08 120.0 13.32 ;
+        END
+    END o18clk
+
+    PIN o18rdy
+        DIRECTION  OUTPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  119.76 26.4 120.0 26.64 ;
+        END
+    END o18rdy
+
+    PIN ai18bias10n
+        DIRECTION  INPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  59.88 0 60.12 0.24 ;
+        END
+    END ai18bias10n
+
+    PIN i18en
+        DIRECTION  INPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  0 3.72 0.24 3.96 ;
+        END
+    END i18en
+
+    PIN i18calibration[0]
+        DIRECTION  INPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  0 7.68 0.24 7.92 ;
+        END
+    END i18calibration[0]
+
+    PIN i18calibration[1]
+        DIRECTION  INPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  0 11.64 0.24 11.88 ;
+        END
+    END i18calibration[1]
+
+    PIN i18calibration[2]
+        DIRECTION  INPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  0 15.6 0.24 15.84 ;
+        END
+    END i18calibration[2]
+
+    PIN i18calibration[3]
+        DIRECTION  INPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  0 19.56 0.24 19.8 ;
+        END
+    END i18calibration[3]
+
+    PIN i18calibration[4]
+        DIRECTION  INPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  0 23.52 0.24 23.76 ;
+        END
+    END i18calibration[4]
+
+    PIN i18calibration[5]
+        DIRECTION  INPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  0 27.48 0.24 27.72 ;
+        END
+    END i18calibration[5]
+
+    PIN i18calibration[6]
+        DIRECTION  INPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  0 31.44 0.24 31.68 ;
+        END
+    END i18calibration[6]
+
+    PIN i18calibration[7]
+        DIRECTION  INPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  0 35.4 0.24 35.64 ;
+        END
+    END i18calibration[7]
+
+END osc10mv1tsmc180n
+
+END LIBRARY

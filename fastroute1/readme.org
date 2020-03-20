@@ -1,0 +1,27 @@
+* Running the example
+
+Without valgrind
+#+BEGIN_SRC bash
+make run
+#+END_SRC
+
+With valgrind
+#+BEGIN_SRC bash
+make valgrind
+#+END_SRC
+
+
+
+
+* OpenROAD version used 
+
+Using OpenROAD branch "openroad"
+
+git log -1 : 
+commit 86a86dbee6d126e010e2fa2b4d2288e5d96eb00a (HEAD -> openroad, origin/openroad)
+Merge: 9c19b36 579b977
+Author: James Cherry <cherry@parallaxsw.com>
+Date:   Thu Mar 19 19:11:08 2020 -0700
+
+    Merge branch 'openroad'
+

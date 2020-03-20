@@ -1,0 +1,112 @@
+library(bytewrite_ram_32bits) {
+
+	time_unit		: "1ns";
+	voltage_unit		: "1V";
+	current_unit		: "1mA";
+	leakage_power_unit	: "1mW";
+	nom_process		: 1;
+	nom_temperature		: 25.000;
+	nom_voltage		: 1.8;
+	capacitive_load_unit	 (1,pf);
+	pulling_resistance_unit	      : "1kohm";
+        default_leakage_power_density : 0.0;
+        default_intrinsic_fall : 0.1;
+        default_inout_pin_fall_res : 0;
+        default_fanout_load : 1;
+        default_intrinsic_rise : 0.1;
+        default_slope_rise : 0;
+        default_output_pin_fall_res : 0;
+        default_inout_pin_cap : 0.02;
+        default_input_pin_cap : 0.02;
+        default_slope_fall : 0;
+        default_inout_pin_rise_res : 0;
+        default_output_pin_cap : 0.02;
+        default_output_pin_rise_res : 0;
+        slew_derate_from_library      : 1;
+        slew_lower_threshold_pct_fall : 20.0;
+        slew_upper_threshold_pct_fall : 80.0;
+        slew_lower_threshold_pct_rise : 20.0;
+        slew_upper_threshold_pct_rise : 80.0;
+        input_threshold_pct_fall      : 50.0;
+        input_threshold_pct_rise      : 50.0;
+        output_threshold_pct_fall     : 50.0;
+        output_threshold_pct_rise     : 50.0;
+	operating_conditions(min) {
+		process	 : 1;
+		temperature : 25.0;
+		voltage	 : 1.8;
+	}
+
+  type (bus4) {
+        base_type : array ;
+  	data_type : bit ;
+  	bit_width : 4;
+  	bit_from : 3;
+  	bit_to : 0 ;
+  	downto : true ;
+  }
+
+
+
+  type (bus32) {
+        base_type : array ;
+  	data_type : bit ;
+  	bit_width : 32;
+  	bit_from : 31;
+  	bit_to : 0 ;
+  	downto : true ;
+  }
+
+
+
+  type (bus12) {
+        base_type : array ;
+  	data_type : bit ;
+  	bit_width : 12;
+  	bit_from : 11;
+  	bit_to : 0 ;
+  	downto : true ;
+  }
+
+
+cell(bytewrite_ram_32bits) {
+	area		 : 90000.0;
+	dont_use	 : TRUE;
+	dont_touch	 : TRUE;
+
+
+
+	bus(we)	 {
+		bus_type : bus4;
+		direction : input;
+
+        }
+
+
+	bus(addr)	 {
+		bus_type : bus12;
+		direction : input;
+
+        }
+
+
+	bus(din)	 {
+		bus_type : bus32;
+		direction : input;
+
+        }
+
+
+	bus(dout)	 {
+		bus_type : bus32;
+		direction : output;
+
+        }
+
+
+	pin(clk) {
+		direction : input;
+	}
+
+    }
+}

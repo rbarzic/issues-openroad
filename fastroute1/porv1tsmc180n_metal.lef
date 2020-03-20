@@ -1,0 +1,43 @@
+VERSION 5.6 ;
+
+
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/"  ;
+
+MACRO porv1tsmc180n
+    CLASS BLOCK ;
+    FOREIGN porv1tsmc180n 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 90.0 BY 210.0 ;
+    SYMMETRY x y r90 ;
+
+    PIN vcc
+        DIRECTION  INOUT ;
+	USE POWER ;
+        PORT
+        LAYER metal1 ;
+        RECT  26.76 205.2 31.56 210.0 ;
+        END
+    END vcc
+
+    PIN gnd
+        DIRECTION  INOUT ;
+	USE GROUND ;
+        PORT
+        LAYER metal1 ;
+        RECT  58.32 205.2 63.12 210.0 ;
+        END
+    END gnd
+
+    PIN o05rstn
+        DIRECTION  OUTPUT ;
+	
+        PORT
+        LAYER metal1 ;
+        RECT  89.76 104.88 90.0 105.12 ;
+        END
+    END o05rstn
+
+END porv1tsmc180n
+
+END LIBRARY
